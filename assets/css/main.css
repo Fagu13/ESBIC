@@ -2087,7 +2087,7 @@ input, select, textarea {
 			top: 0;
 			z-index: 1;
 			box-shadow: inset 0px 0px 0px 1px white;
-			background: white url("images/image-wrapper.svg");
+			background: white;
 		}
 
 	#header-wrapper {
@@ -3140,4 +3140,50 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
+			}
+/*GALERIA*/
+			.galeria{
+				display: flex;
+				flex-wrap: wrap;
+				padding: 10px 20px;
+			}
+			.columna{
+				flex: 20%;
+				max-width: 20%;
+				padding: 0 4px;
+			}
+		
+			.columna img {
+				margin-top: 8px;
+				vertical-align: middle;
+				width: 100%;
+				filter: grayscale(100%);
+				transition: all .3s ease;
+			}
+			.columna img:hover {
+				cursor: pointer;
+				filter: grayscale(0%);
+				box-shadow: 0 0 10px rgba(0,0,0,.5);
+				transform: scale(1,1);
+		
+			}
+		
+			.overlay{
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100vw;
+				height: 100vw;
+				background-color: rgba(0,0,0,.5);
+				z-index: 10000;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: all .7s ease;
+				visibility: hidden;
+				opacity: 0;
+				
+			}
+			.galeria{
+				background-color: white;
 			}
